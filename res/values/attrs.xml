@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MessageType">
+        <attr name="state_message_sender_is_me" format="boolean" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">StudChat</string>
+    <string name="sendText">Send</string>
+    <string name="messagePlaceholder">Enter message here</string>
+    <string name="connect">Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="reconnect">Reconnect</string>
+    <string name="online">Online</string>
+    <string name="stranger">Anonymous</string>
+    <string name="me">Me</string>
+    <string name="connection_pending">Connecting...</string>
+    <string name="connection_established">Connection established.</string>
+    <string name="connection_lost">Connection lost!</string>
+    <string name="connection_failed">Unable to establish connection to server. Check internet connectivity.</string>
+    <string name="user_waiting">Waiting for user...</string>
+    <string name="user_connected">Anonymous connected. Say "Hi!"</string>
+    <string name="user_typing">Anonymous typing text...</string>
+    <string name="user_disconnected">Anonymous Disconnected.</string>
+    <string name="bye">Bye</string>
+    <string name="me_disconnect">You disconnected</string>
+    <string name="new_message">New message!</string>
+    <string name="system">System</string>
+    <string name="service_name">StudChat Connection Service</string>
+    <string name="welcome_big">Welcome to StudChat.</string>
+    <string name="welcome_small">StudChat is a chat for students, where you can talk anonymously. No registrations. Nothing is saved. Enjoy!</string>
+    <string name="welcome_connect">Connect!</string>
+    <string name="menu_notification">Enable notifications</string>
+</resources>

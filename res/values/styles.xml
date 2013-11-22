@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lightBackground">#ecf0f1</color>
+    <color name="edittextBorder">#dce4ec</color>
+    <color name="edittextGreenBorder">#18bc9c</color>
+    <color name="buttonColor">#95a5a6</color>
+    <color name="buttonPressedColor">#7f9293</color>
+    <color name="buttonDisabledColor">#a4b1b2</color>
+    <color name="textColorLight">#DFF3F3</color>
+    <color name="textColorDark">#2c3e50</color>
+    <color name="textShadowColor">#3b4545</color>
+    <color name="anonMessageBackground">#f39c12</color>
+    <style name="Theme.Studchat" parent="Theme.Sherlock.Light">
+        <item name="android:actionBarStyle">@style/Theme.Studchat.ActionBar</item>
+        <item name="android:editTextStyle">@style/Theme.Studchat.EditText</item>
+        <item name="android:buttonStyle" >@style/Theme.Studchat.Button</item>
+        <item name="android:colorBackground">@color/lightBackground</item>
+        <item name="android:windowBackground">@color/lightBackground</item>
+        <item name="android:actionBarItemBackground">@drawable/actionbar_item_normal</item>
+        <item name="android:windowTitleBackgroundStyle">@color/buttonColor</item>
+        <item name="android:imageButtonStyle">@style/Theme.Studchat.ActionBar.Button</item>
+    </style>
+    <style name="Theme.Studchat.EditText" parent="android:Widget.EditText">
+        <item name="android:background">@drawable/edittext</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@color/textColorDark</item>
+    </style>
+    <style name="Theme.Studchat.Button" parent="android:Widget.Button">
+        <item name="android:background">@drawable/button</item>
+        <item name="android:padding">11dp</item>
+        <item name="android:textColor">@color/textColorLight</item>
+        <item name="android:textAppearance">@style/Theme.Studchat.TextStyle</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+    </style>
+    <style name="Theme.Studchat.ActionBar" parent="Widget.Sherlock.Light.ActionBar">
+        <item name="android:background">@color/buttonColor</item>
+        <item name="android:textViewStyle">@style/Theme.Studchat.ActionBar.TextView</item>
+    </style>
+    <style name="Theme.Studchat.ActionBar.Button" parent="android:Widget.ImageButton">
+        <item name="android:background">@drawable/actionbar_item</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    <style name="Theme.Studchat.ActionBar.TextView" parent="android:Widget.TextView">
+        <item name="android:textAppearance">@style/Theme.Studchat.TextStyle</item>
+    </style>
+    <style name="Theme.Studchat.TextStyle" parent="android:TextAppearance">
+        <item name="android:textColor">@color/textColorLight</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Theme.Studchat.TypingTextStyle" parent="android:TextAppearance">
+        <item name="android:textStyle">italic</item>
+    </style>
+</resources>

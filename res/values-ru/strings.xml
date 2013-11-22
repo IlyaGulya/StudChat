@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">СтудЧат</string>
+    <string name="sendText">Отправить</string>
+    <string name="messagePlaceholder">Введите сообщение здесь</string>
+    <string name="connect">Подключиться</string>
+    <string name="disconnect">Отключиться</string>
+    <string name="reconnect">Переподключиться</string>
+    <string name="online">Онлайн</string>
+    <string name="stranger">Аноним</string>
+    <string name="me">Я</string>
+    <string name="connection_pending">Подключаюсь...</string>
+    <string name="connection_established">Соединение установлено.</string>
+    <string name="connection_lost">Соединение потеряно!</string>
+    <string name="connection_failed">Не удалось установить соединение с сервером. Проверьте подключение к интернету.</string>
+    <string name="user_waiting">Ожидаем пользователя...</string>
+    <string name="user_connected">Аноним подключился. Скажи "Привет!"</string>
+    <string name="user_typing">Аноним печатает...</string>
+    <string name="user_disconnected">Аноним отключился.</string>
+    <string name="bye">Пока</string>
+    <string name="me_disconnect">Вы отключились</string>
+    <string name="new_message">Новое сообщение!</string>
+    <string name="system">Система</string>
+    <string name="service_name">StudChat Connection Service</string>
+    <string name="welcome_big">Добро пожаловать в СтудЧат.</string>
+    <string name="welcome_small">СтудЧат — это студенческий чат, где вы можете пообщаться анонимно тет-а-тет. Никаких регистраций. Ничего не сохраняется. Развлекайтесь!</string>
+    <string name="welcome_connect">Подключиться!</string>
+    <string name="menu_notification">Включить уведомления</string>
+</resources>

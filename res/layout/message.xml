@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sender"
+            android:id="@+id/sender" android:layout_gravity="center" android:singleLine="false"
+            android:autoText="false" android:padding="2dp"
+            android:layout_alignParentLeft="true" android:layout_marginLeft="2dp"
+            android:editable="false"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Message"
+            android:id="@+id/message" android:layout_gravity="center"
+            android:layout_toRightOf="@+id/sender" android:layout_alignBaseline="@+id/sender"
+            android:layout_marginLeft="2dp"/>
+</RelativeLayout>

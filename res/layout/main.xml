@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_gravity="center"
+                android:layout_alignParentLeft="true" android:layout_marginLeft="0dp"
+                android:layout_alignParentTop="true" android:layout_marginTop="0dp"
+                xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/relativeLayout"
+        >
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent"
+                  android:layout_height="wrap_content" android:layout_centerHorizontal="true"
+                  android:layout_alignParentBottom="true" android:id="@+id/messageControls">
+        <EditText android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:id="@+id/messageField" android:layout_gravity="left|center_vertical" android:layout_weight="1"
+                  android:hint="@string/messagePlaceholder" android:enabled="false"/>
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sendText"
+                android:id="@+id/sendButton" android:layout_gravity="right|center_vertical" android:enabled="false"/>
+    </LinearLayout>
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/scrollView" android:layout_above="@+id/messageControls">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chatContainer">
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/messageControls"
+                    android:id="@+id/welcomeLayout" android:visibility="invisible">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_big"
+                android:textSize="26dp" android:layout_centerHorizontal="true" android:layout_above="@+id/textView"
+                android:layout_marginBottom="15dp" android:textColor="@color/textColorDark"
+                android:textAlignment="gravity" android:gravity="center_horizontal"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_connect"
+                android:id="@+id/welcomeConnect"
+                android:layout_centerHorizontal="true" android:layout_below="@+id/textView"
+                android:layout_marginTop="20dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_small"
+                android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:textAlignment="gravity"
+                android:gravity="center_horizontal" android:layout_alignParentLeft="true" android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" android:id="@+id/textView" android:textColor="@color/textColorDark"/>
+    </RelativeLayout>
+</RelativeLayout>
