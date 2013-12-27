@@ -5,7 +5,6 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -44,18 +43,7 @@ public class MainActivity extends SherlockActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         init();
-        if (!app.isServiceLaunched())
-            bindService(new Intent(this, ConnectionService.class), new ServiceConnection() {
-                @Override
-                public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-                    app.setServiceLaunched(true);
-                }
-
-                @Override
-                public void onServiceDisconnected(ComponentName componentName) {
-                    app.setServiceLaunched(true);
-                }
-            }, BIND_AUTO_CREATE);
+        ComponentName svc = startService(new Intent(this, ConnectionService.class));
         fillChatContainer();
         if (app.getState() == Toolbox.DISCONNECTED) {
             toggleWelcome();
@@ -96,6 +84,7 @@ public class MainActivity extends SherlockActivity implements View.OnClickListen
     @Override
     public void onResume() {
         super.onResume();
+        bindService(new Intent(this, ConnectionService.class), app.getConnection(), BIND_AUTO_CREATE);
         Counter.sharedInstance().onResumeActivity(this);
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(Toolbox.ACTION_GOT_MESSAGE);
@@ -124,6 +113,7 @@ public class MainActivity extends SherlockActivity implements View.OnClickListen
         Counter.sharedInstance().onPauseActivity(this);
         app.setActivityRunning(false);
         unregisterReceiver(myReceiver);
+        unbindService(app.getConnection());
     }
 
     @Override
