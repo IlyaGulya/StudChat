@@ -8,10 +8,10 @@
     <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent"
                   android:layout_height="wrap_content" android:layout_centerHorizontal="true"
                   android:layout_alignParentBottom="true" android:id="@+id/messageControls">
-        <EditText android:layout_width="wrap_content" android:layout_height="wrap_content"
+        <EditText android:layout_width="wrap_content" android:layout_height="fill_parent"
                   android:id="@+id/messageField" android:layout_gravity="left|center_vertical" android:layout_weight="1"
                   android:hint="@string/messagePlaceholder" android:enabled="false"/>
-        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sendText"
+        <Button android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/sendText"
                 android:id="@+id/sendButton" android:layout_gravity="right|center_vertical" android:enabled="false"/>
     </LinearLayout>
     <ScrollView

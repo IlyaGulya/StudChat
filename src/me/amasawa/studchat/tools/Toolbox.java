@@ -1,6 +1,9 @@
 package me.amasawa.studchat.tools;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.util.Log;
 import me.amasawa.studchat.MainApplication;
 
@@ -14,7 +17,7 @@ public class Toolbox {
 	public static final int SYSTEM = 2;
 	public static final int TYPING_DELAY = 2000;
     public static final long ONLINE_UPDATE_DELAY = 20000L;
-	public static final boolean DEBUG = true;
+	public static final boolean DEBUG = false;
 	public static final String TAG = "amasawa";
 	public static final String PACKAGE = "me.amasawa.studchat.";
     public static final String ACTION_CONNECT = PACKAGE + "connect";
@@ -48,5 +51,14 @@ public class Toolbox {
             if (!intent.getAction().equals(ACTION_NOTIFY_STRANGER_TYPING))
                 app.pendingIntents.add(intent);
         }
+    }
+    public static int getAppVersion(Context app) {
+        PackageInfo info = null;
+        try {
+            info = app.getPackageManager().getPackageInfo(app.getPackageName(),0);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return info.versionCode;
     }
 }

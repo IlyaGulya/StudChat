@@ -15,10 +15,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="AndroidAsync" />
-    <orderEntry type="library" name="com.google.protobuf:protobuf-java:2.4.1" level="project" />
-    <orderEntry type="library" name="yandex-mobmetrica-lib-android-1.0-nolibs" level="project" />
     <orderEntry type="module" module-name="actionbarsherlock" />
+    <orderEntry type="module" module-name="AndroidAsync" />
+    <orderEntry type="library" name="libGoogleAnalyticsServices" level="project" />
   </component>
 </module>
 

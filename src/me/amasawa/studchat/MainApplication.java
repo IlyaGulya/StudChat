@@ -2,7 +2,6 @@ package me.amasawa.studchat;
 
 import android.app.Application;
 import android.content.Intent;
-import com.yandex.metrica.Counter;
 import me.amasawa.studchat.handlers.Connection;
 import me.amasawa.studchat.tools.Toolbox;
 
@@ -22,7 +21,6 @@ public class MainApplication extends Application{
     @Override
     public void onCreate() {
         super.onCreate();
-        Counter.initialize(getApplicationContext());
         this.connection = new Connection(this);
     }
 

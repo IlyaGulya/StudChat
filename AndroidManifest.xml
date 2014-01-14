@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="me.amasawa.studchat"
-          android:versionCode="3"
-          android:versionName="1.0.0.2">
+          android:versionCode="5"
+          android:versionName="1.0.1">
     <uses-sdk android:minSdkVersion="8"/>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -11,7 +11,6 @@
                  android:icon="@drawable/ic_launcher"
                  android:name=".MainApplication"
                  android:theme="@style/Theme.Studchat">
-        <meta-data android:name="metrica:api:key" android:value="9910" />
         <activity android:name=".activities.MainActivity"
                   android:label="@string/app_name">
             <intent-filter>
@@ -21,34 +20,5 @@
         </activity>
         <service android:name=".services.ConnectionService"
                  android:label="@string/service_name" />
-        <service android:name="com.yandex.metrica.MetricaService" android:process=":Metrica" >
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-                <action android:name="com.yandex.metrica.IMetricaService" />
-                <data android:scheme="metrica" />
-            </intent-filter>
-            <meta-data android:name="metrica:api:level" android:value="1" />
-        </service>
-
-        <receiver android:name="com.yandex.metrica.MetricaEventHandler" >
-            <intent-filter>
-                <action android:name="com.yandex.metrica.intent.action.SYNC" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.PACKAGE_ADDED" />
-                <action android:name="android.intent.action.PACKAGE_DATA_CLEARED" />
-                <data android:scheme="package" />
-            </intent-filter>
-        </receiver>
-
-        <receiver android:name="com.yandex.metrica.CampaignReceiver" android:exported="true" >
-            <intent-filter>
-                <action android:name="com.android.vending.INSTALL_REFERRER" />
-            </intent-filter>
-        </receiver>
-        <provider
-                android:name="me.amasawa.studchat.providers.MetricaContentProvider"
-                android:authorities="me.amasawa.studchat.MetricaContentProvider"
-                android:exported="true" />
     </application>
 </manifest>

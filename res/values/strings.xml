@@ -26,4 +26,5 @@
     <string name="welcome_small">StudChat is a chat for students, where you can talk anonymously. No registrations. Nothing is saved. Enjoy!</string>
     <string name="welcome_connect">Connect!</string>
     <string name="menu_notification">Enable notifications</string>
+    <string name="close_changelog">Close</string>
 </resources>

@@ -26,4 +26,5 @@
     <string name="welcome_small">СтудЧат — это студенческий чат, где вы можете пообщаться анонимно тет-а-тет. Никаких регистраций. Ничего не сохраняется. Развлекайтесь!</string>
     <string name="welcome_connect">Подключиться!</string>
     <string name="menu_notification">Включить уведомления</string>
+    <string name="close_changelog">Закрыть</string>
 </resources>

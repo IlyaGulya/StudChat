@@ -16,7 +16,7 @@ import android.widget.*;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.yandex.metrica.Counter;
+import com.google.analytics.tracking.android.EasyTracker;
 import me.amasawa.studchat.MainApplication;
 import me.amasawa.studchat.R;
 import me.amasawa.studchat.services.ConnectionService;
@@ -79,13 +79,19 @@ public class MainActivity extends SherlockActivity implements View.OnClickListen
     @Override
     public void onStart() {
         super.onStart();
+        EasyTracker.getInstance(this).activityStart(this);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        EasyTracker.getInstance(this).activityStop(this);
     }
 
     @Override
     public void onResume() {
         super.onResume();
         bindService(new Intent(this, ConnectionService.class), app.getConnection(), BIND_AUTO_CREATE);
-        Counter.sharedInstance().onResumeActivity(this);
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(Toolbox.ACTION_GOT_MESSAGE);
         intentFilter.addAction(Toolbox.ACTION_SENT_MESSAGE);
@@ -110,7 +116,6 @@ public class MainActivity extends SherlockActivity implements View.OnClickListen
     @Override
     public void onPause() {
         super.onPause();
-        Counter.sharedInstance().onPauseActivity(this);
         app.setActivityRunning(false);
         unregisterReceiver(myReceiver);
         unbindService(app.getConnection());
@@ -197,6 +202,7 @@ public class MainActivity extends SherlockActivity implements View.OnClickListen
     public void hideKeyboard(View view) {
         InputMethodManager ims = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
         ims.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        scrollToLast();
     }
 
     public void sendMessage(String message) {
